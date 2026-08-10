@@ -12,7 +12,7 @@ import Main from '@/layout/Main/Main.tsx';
 import './App.css';
 
 function App() {
-  const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID as string;
+  const ncpKeyId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID as string;
   const [isVisible, setIsVisible] = useState(false);
   const galleryRef = useRef(null);
 
@@ -37,7 +37,7 @@ function App() {
   };
 
   return (
-    <NavermapsProvider ncpClientId={ncpClientId}>
+    <NavermapsProvider ncpKeyId={ncpKeyId}>
       <Container>
         <Wrapper>
           <Main />
