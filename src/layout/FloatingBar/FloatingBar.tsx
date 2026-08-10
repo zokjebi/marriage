@@ -1,17 +1,12 @@
 // import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import data from 'data.json';
 // import { increment, onValue, ref, update } from 'firebase/database';
 // import { realtimeDb } from 'firebase.ts';
-import JSConfetti from 'js-confetti';
-import Heart from '@/assets/icons/heart_plus.svg?react';
 import Share from '@/assets/icons/share.svg?react';
 import Upward from '@/assets/icons/upward.svg?react';
 import Button from '@/components/Button.tsx';
 
 const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
-  const { emojis } = data;
-
   // TODO: count 기능 사용 원할시 firebase realtime db 연결!
   // const [count, setCount] = useState(0);
 
@@ -34,6 +29,7 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
     );
   };
 
+  /*
   const handleCount = () => {
     void jsConfetti.addConfetti({ emojis });
 
@@ -45,16 +41,13 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   };
 
   const jsConfetti = new JSConfetti();
+  */
   const handleScroll = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <Nav isVisible={isVisible}>
-      <Button onClick={handleCount}>
-        <Heart fill="#e88ca6" />
-        {/*{count || ''}*/}
-      </Button>
       <Button onClick={handleCopy}>
         <Share fill="#e88ca6" />
         공유
