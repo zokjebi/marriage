@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 
 const Calendar = () => {
-  const year = 2024;
+  const year = 2026;
   const month = 10; // 11월은 10번째 인덱스 (0부터 시작하기 때문)
 
   const startOfMonth = dayjs(new Date(year, month, 1));
@@ -18,7 +18,7 @@ const Calendar = () => {
   // 날짜 채우기
   const days = Array.from({ length: daysInMonth }).map((_, i) => {
     const date = i + 1;
-    const isToday = date === 23;
+    const isToday = date === 28;
     return (
       <div key={date} className="common-calendar-date">
         <span className={isToday ? "d-day" : ""}>{date}</span>
@@ -37,6 +37,7 @@ const Calendar = () => {
   return (
     <div className="schedule-calendar-wrapper">
       <div className="common-calendar">
+        <div className="common-calendar-month">2026년 11월</div>
         <div className="common-calendar-table">
           <div className="common-calendar-week">
             <div className="common-calendar-day">일</div>
