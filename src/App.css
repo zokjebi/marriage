@@ -21,8 +21,8 @@
 }
 
 .common-calendar .common-calendar-month {
-    text-align: right;
-    font-size: 2rem
+    text-align: center;
+    font-size: 1.5rem
 }
 
 .common-calendar .common-calendar-table {
@@ -68,7 +68,15 @@
 .common-calendar .common-calendar-table .common-calendar-week .common-calendar-day {
     height: 3rem;
     font-weight: 700;
-    color: #e88ca6
+    color: #000
+}
+
+.common-calendar .common-calendar-table .common-calendar-week .common-calendar-day:first-child {
+    color: #e53935
+}
+
+.common-calendar .common-calendar-table .common-calendar-week .common-calendar-day:last-child {
+    color: #1e88e5
 }
 
 .common-wedding-date {
