@@ -1,0 +1,115 @@
+.schedule-wedding-date-wrapper {
+    display: flex;
+    justify-content: flex-end
+}
+
+.schedule-wedding-d-day-wrapper {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.schedule-calendar-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.common-calendar {
+    font-size: .9rem;
+    padding: 1rem 1rem 0rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.common-calendar .common-calendar-month {
+    text-align: right;
+    font-size: 2rem
+}
+
+.common-calendar .common-calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table
+}
+
+.common-calendar .common-calendar-table .common-calendar-week {
+    display: table-row;
+    height: 2.5rem
+}
+
+.common-calendar .common-calendar-table .common-calendar-week .common-calendar-day,.common-calendar .common-calendar-table .common-calendar-week .common-calendar-date {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    position: relative
+}
+
+.common-calendar .common-calendar-table .common-calendar-week .common-calendar-day span,.common-calendar .common-calendar-table .common-calendar-week .common-calendar-date span {
+    position: inherit;
+    z-index: 2
+}
+
+.common-calendar .common-calendar-table .common-calendar-week .common-calendar-day span.d-day,.common-calendar .common-calendar-table .common-calendar-week .common-calendar-date span.d-day {
+    color: #fefefe
+}
+
+.common-calendar .common-calendar-table .common-calendar-week .common-calendar-day span.mark,.common-calendar .common-calendar-table .common-calendar-week .common-calendar-date span.mark {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 2rem;
+    height: 2rem;
+    left: 50%;
+    top: .25rem;
+    transform: translate(-50%);
+    border-radius: 1rem;
+    background-color: #e88ca6;
+}
+
+.common-calendar .common-calendar-table .common-calendar-week .common-calendar-day {
+    height: 3rem;
+    font-weight: 700;
+    color: #e88ca6
+}
+
+.common-wedding-date {
+    font-size: .9rem;
+}
+
+.common-wedding-date .wedding-date-time {
+    margin-bottom: 1rem
+}
+
+.common-wedding-date .wedding-date-time p {
+    font-weight: 700;
+    text-align: right
+}
+
+.common-wedding-date .wedding-duration-text {
+    margin-bottom: .5rem;
+    padding: 0 1.5rem
+}
+
+.common-wedding-date .wedding-duration-counter {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 .5rem
+}
+
+.common-wedding-date .wedding-duration-counter .item {
+    flex-basis: 25%;
+    margin: 0 auto
+}
+
+.common-wedding-date .wedding-duration-counter .item p {
+    text-align: center
+}
+
+.common-wedding-date .wedding-duration-counter .item p.digit {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: -.4rem
+}
+
+.common-wedding-date .wedding-duration-counter .item p.unit {
+    font-size: .8rem
+}

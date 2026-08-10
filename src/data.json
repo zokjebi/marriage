@@ -1,0 +1,104 @@
+{
+  "greeting": {
+    "title": "전기톱맨 \uD83D\uDC8D 전기톱우먼\n우리, 결혼합니다!",
+    "message": "매년 5월 15일이 되면\n저희는 이날의 사진첩을 꺼내보며\n인생에서 가장 행복했던 기억을 떠올릴 것입니다\n그때, 그 사진 속에 저희와 함께 웃고 있는\n여러분이 있었으면 좋겠습니다",
+    "host": {
+      "groom": {
+        "name": "기톱맨",
+        "relation": "아들",
+        "parents": [
+          {
+            "relation": "아버지",
+            "name": "기톱아빠"
+          },
+          {
+            "relation": "어머니",
+            "name": "기톱맘"
+          }
+        ]
+      },
+      "bride": {
+        "name": "기톱",
+        "relation": "딸",
+        "parents": [
+          {
+            "relation": "아버지",
+            "name": "기톱아빠"
+          },
+          {
+            "relation": "어머니",
+            "name": "기톱맘"
+          }
+        ]
+      }
+    },
+    "eventDetail": "2025년 5월 15일 토요일 오후 5시\n여의도 더파티움"
+  },
+  "hostInfo": [
+    {
+      "host": "신랑측",
+      "accountInfo": [
+        {
+          "name": "전기톱맨",
+          "relation": "신랑",
+          "bank": "기업은행",
+          "account": "010-1234-1234"
+        }
+      ]
+    },
+    {
+      "host": "신부측",
+      "accountInfo": [
+        {
+          "name": "전기톱우먼",
+          "relation": "신부",
+          "bank": "기업은행",
+          "account": "010-1234-1234"
+        }
+      ]
+    }
+  ],
+  "date": {
+    "weddingDate": "2025-5-15 17:00",
+    "weddingDateText": "2025년 5월 15일\n토요일 오후 5시"
+  },
+  "mapInfo": {
+    "address1": "여의도 더파티움",
+    "address2": "여의도 중앙회관 1층\n02-347-5500",
+    "naverMap": "https://map.naver.com/p/search/%EB%8D%94%20%ED%8C%8C%ED%8B%B0%EC%9B%80/place/1018318622?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh",
+    "kakaoMap": "https://map.kakao.com/?from=roughmap&eName=%EB%8D%94%ED%8C%8C%ED%8B%B0%EC%9B%80%20%EC%97%AC%EC%9D%98%EB%8F%84&eX=482920.0&eY=1119076.0",
+    "lat": 37.4819407,
+    "lon": 126.7984955
+  },
+  "locationInfo": [
+    {
+      "title": "\uD83D\uDCCD 지하철",
+      "desc": "\uD83D\uDC49\uD83C\uDFFB 5호선 여의도역\n1번 출구 (도보 7분)\n"
+    },
+    {
+      "title": "\uD83D\uDCCD 주차 안내",
+      "desc": "\uD83D\uDC49\uD83C\uDFFB 1~5층, 주차타워 2시간 무료"
+    },
+    {
+      "title": "\uD83D\uDCCD 예식 안내",
+      "desc": "\uD83D\uDC49\uD83C\uDFFB 축하 화환은 정중히 사양합니다.\n좋은 마음만 감사히 받겠습니다.\n\n\uD83D\uDC49\uD83C\uDFFB 7세부터 13세까지는 어린이 식권을 받아주시기 바랍니다.\n6세 이하의 어린이는 무료입니다."
+    }
+  ],
+  "emojis": [
+    "❤️",
+    "💛",
+    "💌",
+    "🥹",
+    "🥳",
+    "👰🏻‍",
+    "🤵🏻‍️",
+    "🤍",
+    "✨",
+    "💍",
+    "💒",
+    "💕",
+    "😍",
+    "🔔",
+    "💘"
+  ]
+}
