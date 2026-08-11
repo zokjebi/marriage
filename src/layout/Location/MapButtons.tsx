@@ -32,9 +32,18 @@ const MapButtons = () => {
 
   return (
     <MapButtonWrapper>
-      <Button onClick={openTMap}>티맵</Button>
-      <Button onClick={() => window.open(naverMap)}>네이버 지도</Button>
-      <Button onClick={() => window.open(kakaoMap)}>카카오맵</Button>
+      <MapButton onClick={openTMap}>
+        <ServiceIcon service="tmap" aria-hidden="true">T</ServiceIcon>
+        티맵
+      </MapButton>
+      <MapButton onClick={() => window.open(naverMap)}>
+        <ServiceIcon service="naver" aria-hidden="true">N</ServiceIcon>
+        네이버 지도
+      </MapButton>
+      <MapButton onClick={() => window.open(kakaoMap)}>
+        <ServiceIcon service="kakao" aria-hidden="true">K</ServiceIcon>
+        카카오맵
+      </MapButton>
     </MapButtonWrapper>
   );
 };
@@ -46,4 +55,28 @@ const MapButtonWrapper = styled.div`
   display: flex;
   gap: 8px;
   justify-content: center;
+`;
+
+const MapButton = styled(Button)`
+  gap: 6px;
+  white-space: nowrap;
+`;
+
+const ServiceIcon = styled.span<{ service: 'tmap' | 'naver' | 'kakao' }>`
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 20px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  color: ${({ service }) => (service === 'kakao' ? '#191919' : '#ffffff')};
+  background-color: ${({ service }) => {
+    if (service === 'tmap') return '#ff3347';
+    if (service === 'naver') return '#03c75a';
+    return '#fee500';
+  }};
 `;

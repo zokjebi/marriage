@@ -73,7 +73,7 @@
   "locationInfo": [
     {
       "title": "\uD83D\uDE8C 버스",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB '동대구역' 정류장에서 413번 또는 937번 버스 탑승\n\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 '전자관' 정류장 하차, 도보 3~5분\n"
+      "desc": "\uD83D\uDC49\uD83C\uDFFB '동대구역' 정류장에서 413번 또는 937번 버스 탑승\n'전자관' 정류장 하차, 도보 3~5분\n"
     },
     {
       "title": "\uD83C\uDD7F\uFE0F 주차 안내",
@@ -81,7 +81,7 @@
     },
     {
       "title": "\uD83D\uDCCD 예식 안내",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 7세부터 13세까지는 어린이 식권을 받아주시기 바랍니다.\n\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 6세 이하의 어린이는 무료입니다."
+      "desc": "\uD83D\uDC49\uD83C\uDFFB 7세부터 13세까지는 어린이 식권을 받아주시기 바랍니다.\n6세 이하의 어린이는 무료입니다."
     }
   ],
   "emojis": [
