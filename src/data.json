@@ -27,7 +27,7 @@
           },
           {
             "relation": "어머니",
-            "name": "권나연"
+            "name": "권순희"
           }
         ]
       }
@@ -39,6 +39,18 @@
       "host": "신랑측",
       "accountInfo": [
         {
+          "name": "류규정",
+          "relation": "신랑 아버지",
+          "bank": "국민은행",
+          "account": "010-1234-1234"
+        },
+        {
+          "name": "방순향",
+          "relation": "신랑 어머니",
+          "bank": "국민은행",
+          "account": "010-1234-1234"
+        },
+        {
           "name": "류동엽",
           "relation": "신랑",
           "bank": "국민은행",
@@ -49,6 +61,18 @@
     {
       "host": "신부측",
       "accountInfo": [
+        {
+          "name": "손정술",
+          "relation": "신부 아버지",
+          "bank": "국민은행",
+          "account": "010-1234-1234"
+        },
+        {
+          "name": "권순희",
+          "relation": "신부 어머니",
+          "bank": "국민은행",
+          "account": "010-1234-1234"
+        },
         {
           "name": "손서연",
           "relation": "신부",
