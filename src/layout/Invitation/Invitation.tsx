@@ -14,11 +14,11 @@ const Invitation = () => {
   const { greeting } = data;
 
   const eventDetails = {
-    title: '이정환 \uD83D\uDC8D 이서진 결혼식',
-    startDateTime: dayjs('2025-5-15 17:00').utc().format('YYYYMMDDTHHmmss') + 'Z',
-    endDateTime: dayjs('2024-5-15 18:00').utc().format('YYYYMMDDTHHmmss') + 'Z',
+    title: '류동엽 \uD83D\uDC8D 손서연 결혼식',
+    startDateTime: dayjs('2026-11-28 16:30').utc().format('YYYYMMDDTHHmmss') + 'Z',
+    endDateTime: dayjs('2026-11-28 17:30').utc().format('YYYYMMDDTHHmmss') + 'Z',
     details: greeting.message,
-    location: '여의도 더파티움',
+    location: '대구 노비아갈라웨딩 전자관점',
   };
 
   const googleCalendarUrl = `https://calendar.google.com/calendar/r/eventedit?text=${encodeURIComponent(eventDetails.title)}&dates=${eventDetails.startDateTime}/${eventDetails.endDateTime}&details=${encodeURIComponent(eventDetails.details)}&location=${encodeURIComponent(eventDetails.location)}&sf=true&output=xml`;
@@ -27,7 +27,7 @@ const Invitation = () => {
     <InvitationWrapper>
       <Paragraph>{greeting.message}</Paragraph>
       <Host />
-      <Caption textAlign={'center'}>{greeting.eventDetail}</Caption>
+      <EventDetail textAlign={'center'}>{greeting.eventDetail}</EventDetail>
       <Calendar />
       <WeddingDday />
       <RoundButton
@@ -47,4 +47,11 @@ const InvitationWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+`;
+
+const EventDetail = styled(Caption)`
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-synthesis: weight;
+  line-height: 1.8;
 `;

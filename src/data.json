@@ -32,34 +32,34 @@
         ]
       }
     },
-    "eventDetail": "2026년 11월 28일 토요일 오후 4시30분\n대구 노비아갈라웨딩 전자관점"
+    "eventDetail": "2026년 11월 28일 토요일 오후 4시30분\n대구 노비아갈라웨딩 전자관점\n5층 보타닉가든홀"
   },
   "hostInfo": [
     {
-      "host": "신랑측",
+      "host": "🤵 신랑측",
       "accountInfo": [
         {
           "name": "류규정",
           "relation": "신랑 아버지",
-          "bank": "국민은행",
-          "account": "010-1234-1234"
+          "bank": "대구은행 (아이엠뱅크)",
+          "account": "099-08-123909"
         },
         {
           "name": "방순향",
           "relation": "신랑 어머니",
-          "bank": "국민은행",
+          "bank": "대구은행 (아이엠뱅크)",
           "account": "010-1234-1234"
         },
         {
           "name": "류동엽",
           "relation": "신랑",
           "bank": "국민은행",
-          "account": "010-1234-1234"
+          "account": "805502-01-194730"
         }
       ]
     },
     {
-      "host": "신부측",
+      "host": "👰 신부측",
       "accountInfo": [
         {
           "name": "손정술",
@@ -88,7 +88,7 @@
   },
   "mapInfo": {
     "address1": "대구 노비아갈라웨딩 전자관점",
-    "address2": "대구 북구 유통단지로 45 5층 보타닉가든홀\n053-604-1900",
+    "address2": "대구 북구 유통단지로 45\n053-604-1900",
     "naverMap": "https://naver.me/FZ27IE5U",
     "kakaoMap": "https://kko.to/Ts0QI1gglK",
     "lat": 35.90720,
