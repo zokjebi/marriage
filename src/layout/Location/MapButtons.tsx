@@ -51,15 +51,33 @@ const MapButtons = () => {
 export default MapButtons;
 
 const MapButtonWrapper = styled.div`
-  margin: 8px;
+  width: 100%;
+  margin: 8px 0;
+  padding: 0 4px;
+  box-sizing: border-box;
   display: flex;
   gap: 8px;
   justify-content: center;
+
+  @media screen and (max-width: 420px) {
+    gap: 5px;
+    padding: 0 2px;
+  }
 `;
 
 const MapButton = styled(Button)`
   gap: 6px;
+  min-width: 0;
+  flex: 1 1 0;
+  justify-content: center;
+  box-sizing: border-box;
   white-space: nowrap;
+
+  @media screen and (max-width: 420px) {
+    gap: 4px;
+    padding: 0.5em 0.3em;
+    font-size: clamp(0.72rem, 3.4vw, 0.86rem);
+  }
 `;
 
 const ServiceIcon = styled.span<{ service: 'tmap' | 'naver' | 'kakao' }>`
@@ -79,4 +97,12 @@ const ServiceIcon = styled.span<{ service: 'tmap' | 'naver' | 'kakao' }>`
     if (service === 'naver') return '#03c75a';
     return '#fee500';
   }};
+
+  @media screen and (max-width: 420px) {
+    width: 18px;
+    height: 18px;
+    flex-basis: 18px;
+    border-radius: 5px;
+    font-size: 11px;
+  }
 `;
