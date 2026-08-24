@@ -41,7 +41,7 @@ const MapButtons = () => {
       </MapButton>
       <MapButton onClick={() => window.open(naverMap)}>
         <ServiceIcon src={naverMapIcon} alt="" aria-hidden="true" />
-        네이버 지도
+        네이버지도
       </MapButton>
       <MapButton onClick={() => window.open(kakaoMap)}>
         <ServiceIcon src={kakaoMapIcon} alt="" aria-hidden="true" />
