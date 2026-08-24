@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 import data from 'data.json';
 import Button from '@/components/Button.tsx';
+import tmapIcon from '@/assets/icons/tmap.webp';
+import naverMapIcon from '@/assets/icons/naver-map.webp';
+import kakaoMapIcon from '@/assets/icons/kakao-map.webp';
 
 const MapButtons = () => {
   const { address1, lat, lon, naverMap, kakaoMap } = data.mapInfo;
@@ -33,15 +36,15 @@ const MapButtons = () => {
   return (
     <MapButtonWrapper>
       <MapButton onClick={openTMap}>
-        <ServiceIcon service="tmap" aria-hidden="true">T</ServiceIcon>
+        <ServiceIcon src={tmapIcon} alt="" aria-hidden="true" />
         티맵
       </MapButton>
       <MapButton onClick={() => window.open(naverMap)}>
-        <ServiceIcon service="naver" aria-hidden="true">N</ServiceIcon>
+        <ServiceIcon src={naverMapIcon} alt="" aria-hidden="true" />
         네이버 지도
       </MapButton>
       <MapButton onClick={() => window.open(kakaoMap)}>
-        <ServiceIcon service="kakao" aria-hidden="true">K</ServiceIcon>
+        <ServiceIcon src={kakaoMapIcon} alt="" aria-hidden="true" />
         카카오맵
       </MapButton>
     </MapButtonWrapper>
@@ -80,29 +83,18 @@ const MapButton = styled(Button)`
   }
 `;
 
-const ServiceIcon = styled.span<{ service: 'tmap' | 'naver' | 'kakao' }>`
+const ServiceIcon = styled.img`
   width: 20px;
   height: 20px;
-  border-radius: 6px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   flex: 0 0 20px;
-  font-size: 12px;
-  font-weight: 800;
-  line-height: 1;
-  color: ${({ service }) => (service === 'kakao' ? '#191919' : '#ffffff')};
-  background-color: ${({ service }) => {
-    if (service === 'tmap') return '#ff3347';
-    if (service === 'naver') return '#03c75a';
-    return '#fee500';
-  }};
+  border-radius: 5px;
+  object-fit: cover;
 
   @media screen and (max-width: 420px) {
     width: 18px;
     height: 18px;
     flex-basis: 18px;
-    border-radius: 5px;
-    font-size: 11px;
+    border-radius: 4px;
   }
 `;
