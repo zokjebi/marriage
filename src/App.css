@@ -79,6 +79,14 @@
     color: #1e88e5
 }
 
+.common-calendar .common-calendar-date.sunday {
+    color: #e53935
+}
+
+.common-calendar .common-calendar-date.saturday {
+    color: #1e88e5
+}
+
 .common-wedding-date {
     font-size: .9rem;
 }

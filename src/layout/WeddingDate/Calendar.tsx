@@ -19,8 +19,10 @@ const Calendar = () => {
   const days = Array.from({ length: daysInMonth }).map((_, i) => {
     const date = i + 1;
     const isToday = date === 28;
+    const dayOfWeek = (startDay + i) % 7;
+    const weekendClass = dayOfWeek === 0 ? 'sunday' : dayOfWeek === 6 ? 'saturday' : '';
     return (
-      <div key={date} className="common-calendar-date">
+      <div key={date} className={`common-calendar-date ${weekendClass}`}>
         <span className={isToday ? "d-day" : ""}>{date}</span>
         <span className={isToday ? "mark" : ""}></span>
       </div>
