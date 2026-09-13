@@ -6,7 +6,9 @@ const Main = () => {
   const { greeting } = data;
   return (
     <div>
-      <MainImg src={mainImg} />
+      <MainImageFrame>
+        <MainImg src={mainImg} />
+      </MainImageFrame>
       <MainTitle>{greeting.title}</MainTitle>      
     </div>
   );
@@ -14,11 +16,20 @@ const Main = () => {
 
 export default Main;
 
-const MainImg = styled.img`
+const MainImageFrame = styled.div`
   border-radius: 200px 200px 0 0;
   width: 90%;
   max-width: 450px;
-  padding-top: 20px;
+  aspect-ratio: 3 / 4;
+  margin: 20px auto 0;
+  overflow: hidden;
+`;
+
+const MainImg = styled.img`
+  display: block;
+  width: 115%;
+  max-width: none;
+  transform: translateX(-10%);
 `;
 
 const MainTitle = styled.p`

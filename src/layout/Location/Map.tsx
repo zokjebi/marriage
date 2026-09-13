@@ -4,6 +4,8 @@ import { Container as MapDiv, Marker, NaverMap, useNavermaps } from 'react-naver
 const Map = () => {
   const { lat, lon } = data.mapInfo;
   const navermaps = useNavermaps();
+  const centerLatitude = lat - 0.0007;
+  const centerLongitude = lon + 0.00191;
 
   return (
     <MapDiv
@@ -12,7 +14,7 @@ const Map = () => {
         height: '300px',
       }}>
       <NaverMap
-        defaultCenter={new navermaps.LatLng(lat, lon)}
+        defaultCenter={new navermaps.LatLng(centerLatitude, centerLongitude)}
         defaultZoom={16}
         zoomControl={false}
         draggable={false}

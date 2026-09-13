@@ -9,7 +9,7 @@ const Location = () => {
   const { mapInfo } = data;
   return (
     <LocationWrapper>
-      <PointTitle>{mapInfo.address1}</PointTitle>
+      <AddressTitle>{mapInfo.address1}</AddressTitle>
       <Caption textAlign={'center'}>{mapInfo.address2}</Caption>
       <Map />
       <MapButtons />
@@ -19,6 +19,10 @@ const Location = () => {
 };
 
 export default Location;
+
+const AddressTitle = styled(PointTitle)`
+  color: #000;
+`;
 
 const LocationWrapper = styled.div`
   width: 90%;

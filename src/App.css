@@ -56,13 +56,32 @@
     content: "";
     position: absolute;
     z-index: 1;
-    width: 2rem;
-    height: 2rem;
+    width: 1.45rem;
+    height: 1.45rem;
     left: 50%;
-    top: .25rem;
-    transform: translate(-50%);
-    border-radius: 1rem;
+    top: .65rem;
+    transform: translateX(-50%) rotate(45deg);
     background-color: #e88ca6;
+}
+
+.common-calendar .common-calendar-table .common-calendar-week .common-calendar-date span.mark::before,
+.common-calendar .common-calendar-table .common-calendar-week .common-calendar-date span.mark::after {
+    content: "";
+    position: absolute;
+    width: 1.45rem;
+    height: 1.45rem;
+    border-radius: 50%;
+    background-color: #e88ca6;
+}
+
+.common-calendar .common-calendar-table .common-calendar-week .common-calendar-date span.mark::before {
+    top: -50%;
+    left: 0;
+}
+
+.common-calendar .common-calendar-table .common-calendar-week .common-calendar-date span.mark::after {
+    top: 0;
+    left: -50%;
 }
 
 .common-calendar .common-calendar-table .common-calendar-week .common-calendar-day {
