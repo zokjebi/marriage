@@ -6,30 +6,27 @@ const Main = () => {
   const { greeting } = data;
   return (
     <div>
-      <MainImageFrame>
-        <MainImg src={mainImg} />
-      </MainImageFrame>
-      <MainTitle>{greeting.title}</MainTitle>      
+      <MainImg src={mainImg} />
+      <MainTitle>
+        {greeting.title.split(/(류동엽|손서연)/).map((text, index) =>
+          text === '류동엽' || text === '손서연' ? (
+            <Name key={index}>{text}</Name>
+          ) : (
+            text
+          ),
+        )}
+      </MainTitle>
     </div>
   );
 };
 
 export default Main;
 
-const MainImageFrame = styled.div`
+const MainImg = styled.img`
   border-radius: 200px 200px 0 0;
   width: 90%;
   max-width: 450px;
-  aspect-ratio: 3 / 4;
-  margin: 20px auto 0;
-  overflow: hidden;
-`;
-
-const MainImg = styled.img`
-  display: block;
-  width: 115%;
-  max-width: none;
-  transform: translateX(-10%);
+  padding-top: 20px;
 `;
 
 const MainTitle = styled.p`
@@ -38,5 +35,10 @@ const MainTitle = styled.p`
   color: #2F2120;
   line-height: 120%;
   white-space: pre-line;
+`;
+
+const Name = styled.strong`
+  font-weight: 700;
+  font-synthesis: weight;
 `;
 

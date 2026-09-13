@@ -8,8 +8,8 @@ const Host = () => {
   return (
     <>
       <HostContainer>
-        <HostInfo person={groom} />
-        <HostInfo person={bride} />
+        <HostInfo person={groom} role="신랑" />
+        <HostInfo person={bride} role="신부" />
       </HostContainer>
     </>
   );
@@ -17,7 +17,7 @@ const Host = () => {
 
 export default Host;
 
-const HostInfo = ({ person }: { person: BrideAndGroom }) => {
+const HostInfo = ({ person, role }: { person: BrideAndGroom; role: '신랑' | '신부' }) => {
   return (
     <HostDetails>
       {person.parents && (
@@ -35,12 +35,14 @@ const HostInfo = ({ person }: { person: BrideAndGroom }) => {
         <Relation>{person.relation}</Relation>
       </RelationText>
       <HighlightedName>{person.name}</HighlightedName>
+      <span>{role}</span>
     </HostDetails>
   );
 };
 
-const HighlightedName = styled.span`
-  font-weight: 600;
+const HighlightedName = styled.strong`
+  font-weight: 700;
+  font-synthesis: weight;
   font-size: 1.1rem;
   color: #4f4f4f;
   margin-right: 5px;
@@ -59,7 +61,7 @@ const HostDetails = styled.div`
   gap: 6px;
   text-align: center;
   align-items: center;
-  font-weight: 700;
+  font-weight: 400;
 `;
 
 const RelationText = styled.div`

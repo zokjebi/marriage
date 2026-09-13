@@ -10,7 +10,7 @@ const Location = () => {
   return (
     <LocationWrapper>
       <AddressTitle>{mapInfo.address1}</AddressTitle>
-      <Caption textAlign={'center'}>{mapInfo.address2}</Caption>
+      <AddressCaption textAlign={'center'}>{mapInfo.address2}</AddressCaption>
       <Map />
       <MapButtons />
       <Address />
@@ -22,6 +22,11 @@ export default Location;
 
 const AddressTitle = styled(PointTitle)`
   color: #000;
+  margin-top: 1rem;
+`;
+
+const AddressCaption = styled(Caption)`
+  margin-top: 0.5rem;
 `;
 
 const LocationWrapper = styled.div`
