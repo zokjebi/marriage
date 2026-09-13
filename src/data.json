@@ -88,7 +88,8 @@
   },
   "mapInfo": {
     "address1": "대구 노비아갈라웨딩 전자관점",
-    "address2": "(대구 북구 유통단지로 45)\n053-604-1900",
+    "address2": "(대구 북구 유통단지로 45)",
+    "phone": "053-604-1900",
     "naverMap": "https://naver.me/FZ27IE5U",
     "kakaoMap": "https://kko.to/Ts0QI1gglK",
     "lat": 35.90720,
@@ -101,7 +102,7 @@
     },
     {
       "title": "\uD83C\uDD7F\uFE0F 주차 안내",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB [4층, 옥상 주차장] 2시간 무료"
+      "desc": "\uD83D\uDC49\uD83C\uDFFB [4층, 옥상 주차장] 2시간 30분 무료"
     }
   ],
   "emojis": [
