@@ -32,7 +32,8 @@ const AccountWrap = ({
       </Info>
       <Details>
         <AccountInfo>
-          {bank} {account}
+          <BankName>{bank}</BankName>
+          <AccountNumber>{account}</AccountNumber>
         </AccountInfo>
         <CopyButton onClick={handleCopy}>
           <Copy fill="#dfdfdf" />
@@ -74,7 +75,17 @@ const Details = styled.div`
   justify-content: space-between;
 `;
 
-const AccountInfo = styled.div``;
+const AccountInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+const BankName = styled.span``;
+
+const AccountNumber = styled.span`
+  margin-top: 0.15rem;
+`;
 const CopyButton = styled.button`
   border: none;
   border-radius: 5px;
