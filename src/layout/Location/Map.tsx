@@ -13,9 +13,9 @@ const Map = () => {
       }}>
       <NaverMap
         defaultCenter={new navermaps.LatLng(lat, lon)}
-        defaultZoom={16}
-        zoomControl={false}
-        draggable={false}
+        defaultZoom={14}
+        zoomControl={true}
+        draggable={true}
         pinchZoom={false}
         scrollWheel={false}
         keyboardShortcuts={false}>
