@@ -28,19 +28,22 @@
 .common-calendar .common-calendar-table {
     width: 100%;
     border-collapse: collapse;
-    display: table
+    display: table;
+    overflow: visible
 }
 
 .common-calendar .common-calendar-table .common-calendar-week {
     display: table-row;
-    height: 2.5rem
+    height: 2.75rem;
+    overflow: visible
 }
 
 .common-calendar .common-calendar-table .common-calendar-week .common-calendar-day,.common-calendar .common-calendar-table .common-calendar-week .common-calendar-date {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    position: relative
+    position: relative;
+    overflow: visible
 }
 
 .common-calendar .common-calendar-table .common-calendar-week .common-calendar-day span,.common-calendar .common-calendar-table .common-calendar-week .common-calendar-date span {
@@ -56,11 +59,11 @@
     content: "";
     position: absolute;
     z-index: 1;
-    width: 1.45rem;
-    height: 1.45rem;
+    width: 1.05rem;
+    height: 1.05rem;
     left: 50%;
-    top: .65rem;
-    transform: translateX(-50%) rotate(45deg);
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
     background-color: #e88ca6;
 }
 
@@ -68,8 +71,8 @@
 .common-calendar .common-calendar-table .common-calendar-week .common-calendar-date span.mark::after {
     content: "";
     position: absolute;
-    width: 1.45rem;
-    height: 1.45rem;
+    width: 1.05rem;
+    height: 1.05rem;
     border-radius: 50%;
     background-color: #e88ca6;
 }

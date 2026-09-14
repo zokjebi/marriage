@@ -6,11 +6,12 @@ const Container = styled.div`
   border-image-slice: 30% 49%; /* 이미지의 크기 설정 */
   border-image-width: 280px; /* 테두리 이미지의 너비 설정 */
   background-color: #ffffff;
-  width: 85vw;
+  box-sizing: border-box;
+  width: min(calc(85vw + 60px), 100vw);
   margin: 0 auto;
 
   @media screen and (min-width: 500px) {
-      width: 500px;
+      width: min(560px, 100vw);
   }
 `;
 export default Container;
