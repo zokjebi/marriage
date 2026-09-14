@@ -62,7 +62,7 @@ export default Map;
 const VenueButton = styled.button`
   position: absolute;
   left: 50%;
-  bottom: 12px;
+  bottom: 20px;
   z-index: 10;
   display: inline-flex;
   align-items: center;
