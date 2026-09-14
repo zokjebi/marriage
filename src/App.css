@@ -59,10 +59,10 @@
     content: "";
     position: absolute;
     z-index: 1;
-    width: 1.05rem;
-    height: 1.05rem;
+    width: .95rem;
+    height: .95rem;
     left: 50%;
-    top: 50%;
+    top: calc(50% + 2px);
     transform: translate(-50%, -50%) rotate(45deg);
     background-color: #e88ca6;
 }
@@ -71,8 +71,8 @@
 .common-calendar .common-calendar-table .common-calendar-week .common-calendar-date span.mark::after {
     content: "";
     position: absolute;
-    width: 1.05rem;
-    height: 1.05rem;
+    width: .95rem;
+    height: .95rem;
     border-radius: 50%;
     background-color: #e88ca6;
 }

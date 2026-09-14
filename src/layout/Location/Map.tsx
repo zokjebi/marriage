@@ -1,9 +1,17 @@
+import { useRef } from 'react';
+import styled from '@emotion/styled';
 import data from 'data.json';
 import { Container as MapDiv, Marker, NaverMap, useNavermaps } from 'react-naver-maps';
 
 const Map = () => {
   const { lat, lon } = data.mapInfo;
   const navermaps = useNavermaps();
+  const mapRef = useRef<naver.maps.Map | null>(null);
+
+  const moveToVenue = () => {
+    mapRef.current?.setCenter(new navermaps.LatLng(lat, lon));
+    mapRef.current?.setZoom(14);
+  };
 
   return (
     <MapDiv
@@ -12,6 +20,7 @@ const Map = () => {
         height: '300px',
       }}>
       <NaverMap
+        ref={mapRef}
         defaultCenter={new navermaps.LatLng(lat, lon)}
         defaultZoom={14}
         zoomControl={true}
@@ -40,8 +49,35 @@ const Map = () => {
           }}
         />
       </NaverMap>
+      <VenueButton type="button" onClick={moveToVenue}>
+        <span aria-hidden="true">📍</span>
+        노비아갈라 전자관점
+      </VenueButton>
     </MapDiv>
   );
 };
 
 export default Map;
+
+const VenueButton = styled.button`
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transform: translateX(-50%);
+  padding: 0.45rem 0.75rem;
+  border: 1px solid #e88ca6;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #2f2120;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(47, 33, 32, 0.2);
+  cursor: pointer;
+`;
