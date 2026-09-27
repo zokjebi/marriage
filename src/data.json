@@ -27,7 +27,7 @@
           },
           {
             "relation": "어머니",
-            "name": "권순희"
+            "name": "권순희(나현)"
           }
         ]
       }
@@ -102,7 +102,7 @@
     },
     {
       "title": "\uD83C\uDD7F\uFE0F 주차 안내",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB [4층, 옥상 주차장] 2시간 30분 무료"
+      "desc": "\uD83D\uDC49\uD83C\uDFFB [지상 4층, 옥상 주차장] 2시간 30분 무료\n\uD83D\uDC49\uD83C\uDFFB [지상 1층] 2시간 30분 무료\n\uD83D\uDC49\uD83C\uDFFB [지하 1층, 2층] 2시간 30분 무료"
     }
   ],
   "emojis": [
