@@ -6,6 +6,7 @@
 .schedule-wedding-d-day-wrapper {
     margin-bottom: 1rem;
     width: 100%;
+    align-self: center;
 }
 
 .schedule-calendar-wrapper {
@@ -15,7 +16,8 @@
 }
 
 @media screen and (max-width: 499px) {
-    .schedule-calendar-wrapper {
+    .schedule-calendar-wrapper,
+    .schedule-wedding-d-day-wrapper {
         width: calc(100vw - 84px);
     }
 }
