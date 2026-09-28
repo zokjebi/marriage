@@ -11,6 +11,13 @@
 .schedule-calendar-wrapper {
     display: flex;
     width: 100%;
+    align-self: center;
+}
+
+@media screen and (max-width: 499px) {
+    .schedule-calendar-wrapper {
+        width: calc(100vw - 84px);
+    }
 }
 
 .common-calendar {
@@ -18,6 +25,7 @@
     padding: 1rem 1rem 0rem;
     margin-bottom: 1.5rem;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .common-calendar .common-calendar-month {
