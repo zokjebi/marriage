@@ -69,8 +69,8 @@ const images = [
     source: image07,
     width: wideWidth,
     height: height,
-    previewWidth: '1976',
-    previewHeight: '2523',
+    previewWidth: '1491',
+    previewHeight: '2239',
   },
   {
     alt: 'image08',
