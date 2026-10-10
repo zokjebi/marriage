@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import data from 'data.json';
 import { BrideAndGroom } from '@/types/data.ts';
@@ -20,22 +19,14 @@ export default Host;
 const HostInfo = ({ person, role }: { person: BrideAndGroom; role: '신랑' | '신부' }) => {
   return (
     <HostDetails>
-      {person.parents && (
-        <>
-          {person.parents.map((parent, index) => (
-            <React.Fragment key={index}>
-              {index > 0 && ' · '}
-              {parent.name}
-            </React.Fragment>
-          ))}
-        </>
-      )}
+      <ParentName>{person.parents?.[0]?.name}</ParentName>
+      <ParentSeparator>·</ParentSeparator>
+      <ParentName>{person.parents?.[1]?.name}</ParentName>
       <RelationText>
-        <div>의</div>
-        <Relation>{person.relation}</Relation>
+        의 {person.relation}
       </RelationText>
       <HighlightedName>{person.name}</HighlightedName>
-      <span>{role}</span>
+      <Role>{role}</Role>
     </HostDetails>
   );
 };
@@ -45,33 +36,37 @@ const HighlightedName = styled.strong`
   font-synthesis: weight;
   font-size: 1.1rem;
   color: #4f4f4f;
-  margin-right: 5px;
 `;
 
 const HostContainer = styled.div`
-  gap: 8px;
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content max-content max-content;
+  column-gap: 6px;
+  row-gap: 8px;
+  justify-content: center;
+  align-items: center;
   font-family: HSSanTokki20-Regular, serif;
 `;
 
 const HostDetails = styled.div`
-  padding: 0 55px;
-  justify-content: center;
+  display: contents;
+`;
+
+const ParentName = styled.span`
   white-space: nowrap;
-  display: flex;
-  gap: 6px;
+  text-align: left;
+`;
+
+const ParentSeparator = styled.span`
   text-align: center;
-  align-items: center;
-  font-weight: 400;
 `;
 
-const RelationText = styled.div`
-  font-style: normal;
+const RelationText = styled.span`
+  white-space: nowrap;
   line-height: 26px;
-  width: 50px;
-  display: flex;
-  gap: 6px;
 `;
 
-const Relation = styled.div`
-  width: inherit;
+const Role = styled.span`
+  white-space: nowrap;
+  text-align: left;
 `;
