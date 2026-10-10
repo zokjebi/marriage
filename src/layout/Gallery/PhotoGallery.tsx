@@ -5,17 +5,7 @@ import images from '@/layout/Gallery/Images.ts';
 
 const PhotoGallery = () => {
   return (
-    <Gallery
-      options={{
-        showHideAnimationType: 'fade',
-        zoom: false,
-        initialZoomLevel: 'fit',
-        secondaryZoomLevel: 'fit',
-        maxZoomLevel: 'fit',
-        imageClickAction: false,
-        doubleTapAction: false,
-        wheelToZoom: false,
-      }}>
+    <Gallery>
       <GalleryGrid>
         {images.slice(0, 8).map((image) => (
           <Item
