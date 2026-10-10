@@ -5,7 +5,17 @@ import images from '@/layout/Gallery/Images.ts';
 
 const PhotoGallery = () => {
   return (
-    <Gallery>
+    <Gallery
+      options={{
+        showHideAnimationType: 'fade',
+        zoom: false,
+        initialZoomLevel: 'fit',
+        secondaryZoomLevel: 'fit',
+        maxZoomLevel: 'fit',
+        imageClickAction: false,
+        doubleTapAction: false,
+        wheelToZoom: false,
+      }}>
       <GalleryGrid>
         {images.slice(0, 8).map((image) => (
           <Item
@@ -13,8 +23,8 @@ const PhotoGallery = () => {
             cropped
             original={image.source}
             thumbnail={image.source}
-            width="1280"
-            height="1920">
+            width={image.previewWidth}
+            height={image.previewHeight}>
             {({ ref, open }) => (
               <GalleryImage
                 ref={ref as React.MutableRefObject<HTMLImageElement>}
