@@ -14,6 +14,18 @@ const PhotoGallery = () => {
         imageClickAction: false,
         doubleTapAction: false,
         wheelToZoom: false,
+        pinchToClose: false,
+        closeOnVerticalDrag: false,
+        allowPanToNext: false,
+      }}
+      onBeforeOpen={(photoswipe) => {
+        photoswipe.on('pointerDown', (event) => {
+          const { originalEvent } = event;
+
+          if (originalEvent.pointerType === 'touch' && originalEvent.target instanceof HTMLImageElement) {
+            event.preventDefault();
+          }
+        });
       }}>
       <GalleryGrid>
         {images.slice(0, 8).map((image) => (
