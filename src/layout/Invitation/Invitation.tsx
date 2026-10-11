@@ -12,7 +12,11 @@ const Invitation = () => {
     <InvitationWrapper>
       <Paragraph>{greeting.message}</Paragraph>
       <Host />
-      <EventDetail textAlign={'center'}>{greeting.eventDetail}</EventDetail>
+      <EventDetail textAlign={'center'}>
+        {greeting.eventDetail.split('\n').map((line) => (
+          <EventDetailLine key={line}>{line}</EventDetailLine>
+        ))}
+      </EventDetail>
       <Calendar />
       <WeddingDday />      
     </InvitationWrapper>
@@ -29,8 +33,17 @@ const InvitationWrapper = styled.div`
 `;
 
 const EventDetail = styled(Caption)`
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 4.3vw, 1.15rem);
   font-weight: 700;
   font-synthesis: weight;
   line-height: 1.8;
+`;
+
+const EventDetailLine = styled.span`
+  display: block;
+  white-space: nowrap;
+
+  @media screen and (max-width: 380px) {
+    letter-spacing: -0.04em;
+  }
 `;
