@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import Share from '@/assets/icons/share.svg?react';
 import Upward from '@/assets/icons/upward.svg?react';
 import Button from '@/components/Button.tsx';
+import data from 'data.json';
 
 const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   // TODO: count 기능 사용 원할시 firebase realtime db 연결!
@@ -18,8 +19,8 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   //   });
   // }, []);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(window.location.href).then(
+  const copyUrl = () => {
+    navigator.clipboard.writeText('https://zokjebi.github.io/marriage/').then(
       () => {
         alert('주소가 복사되었습니다.😉😉');
       },
@@ -27,6 +28,27 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
         alert('주소 복사에 실패했습니다.🥲🥲');
       },
     );
+  };
+
+  const handleShare = async () => {
+    if (!navigator.share) {
+      copyUrl();
+      return;
+    }
+
+    try {
+      await navigator.share({
+        title: data.greeting.title.replace(/\n/g, ' '),
+        text: data.greeting.eventDetail,
+        url: 'https://zokjebi.github.io/marriage/',
+      });
+    } catch (error) {
+      if (error instanceof DOMException && error.name === 'AbortError') {
+        return;
+      }
+
+      copyUrl();
+    }
   };
 
   /*
@@ -48,7 +70,7 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
 
   return (
     <Nav isVisible={isVisible}>
-      <Button onClick={handleCopy}>
+      <Button onClick={handleShare}>
         <Share fill="#e88ca6" />
         공유
       </Button>
